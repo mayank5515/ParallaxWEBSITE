@@ -1,0 +1,29 @@
+let text=document.getElementById('text');
+let hill1=document.getElementById('hill1');
+let hill4=document.getElementById('hill4');
+let hill5=document.getElementById('hill5');
+let leaf=document.getElementById('leaf');
+let secContainer=document.querySelector('.sec');
+let parallaxContainer=document.querySelector('.sec');
+let coordinates=parallaxContainer.getBoundingClientRect();
+document.addEventListener('scroll',()=>{
+    console.log(coordinates)
+})
+window.addEventListener('scroll',()=>{
+    let value=window.scrollY;
+    // console.log(value);
+    // let coordinates=secContainer.getBoundingClientRect(e);
+    // console.log(coordinates);
+    text.style.marginTop=value*2.5 +'px';
+    leaf.style.top=-value*2.5+ 'px';
+    leaf.style.left=value*2.5+ 'px'; //ye alok se puchio
+    hill1.style.top=value*1+'px';
+    // hill4.style.top=value*1.5+ 'px';
+    hill4.style.left=-value*2.5+'px';
+    hill5.style.left=value*2.5+'px';
+    // if()
+    if(value>2062){
+        return;
+    }
+
+})
